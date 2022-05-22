@@ -1,11 +1,18 @@
 import '../styles/app.css'
-import Navigation from './Navigation/Navigation'
+import Dashboard from '../Pages/Dashboard'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Error404 from '../Pages/Error404'
 
 function App() {
   return (
-    <div className="App">
-      <Navigation />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/:id/dashboard" element={<Dashboard />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 

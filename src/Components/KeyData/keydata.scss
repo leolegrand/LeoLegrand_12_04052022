@@ -1,0 +1,71 @@
+.key-data {
+  width: 100%;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 2vw;
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-100px) scaleX(0.9);
+    }
+    10% {
+      transform: translateY(-15%) scaleX(0.95);
+    }
+    20% {
+      transform: translateY(0%) scaleX(1);
+    }
+    30% {
+      transform: translateY(-7%) scaleX(0.95);
+    }
+    40% {
+      transform: translateY(0%) scaleX(1);
+    }
+    50% {
+      transform: translateY(-3%) scaleX(0.98);
+    }
+    100% {
+      transform: translateY(0) scaleX(1);
+    }
+  }
+
+  &__icon {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 6px;
+    &--calorieCount {
+      background-color: rgba(255, 0, 0, 0.07);
+    }
+    &--lipidCount {
+      background-color: rgba(253, 81, 129, 0.1);
+    }
+    &--proteinCount {
+      background-color: rgba(74, 184, 255, 0.1);
+    }
+    &--carbohydrateCount {
+      background-color: rgba(249, 206, 35, 0.1);
+    }
+    & img {
+      animation: bounce 2s ease;
+    }
+  }
+
+  &__label {
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    p {
+      margin-top: 2px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #74798c;
+    }
+  }
+}

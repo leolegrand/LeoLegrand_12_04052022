@@ -1,0 +1,138 @@
+@import '../Components/app.scss';
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-100px) scaleX(0.9);
+  }
+  10% {
+    transform: translateY(-15%) scaleX(0.95);
+  }
+  20% {
+    transform: translateY(0%) scaleX(1);
+  }
+  30% {
+    transform: translateY(-7%) scaleX(0.95);
+  }
+  40% {
+    transform: translateY(0%) scaleX(1);
+  }
+  50% {
+    transform: translateY(-3%) scaleX(0.98);
+  }
+  100% {
+    transform: translateY(0) scaleX(1);
+  }
+}
+
+.red {
+  animation: bounce 2s ease;
+  color: $primary-color;
+}
+.dashboard {
+  margin-left: 117px;
+  margin-top: $navigation-margin;
+  padding: 68px 90px 87px 107px;
+  &__hello {
+    display: flex;
+    gap: 1rem;
+    font-size: 48px;
+    font-weight: 500;
+  }
+  &__recap {
+    margin-left: 3px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.activies-wrapper {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  gap: 1vw;
+}
+.activities__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.activities__key-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weight {
+  position: relative;
+  background-color: #fbfbfb;
+  margin-bottom: 1vw;
+  & h2 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 15px;
+    color: #20253a;
+  }
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  &__goals,
+  &__kpi,
+  &__radar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    width: 32%;
+    border-radius: 5px;
+  }
+
+  &__kpi {
+    position: relative;
+    background-color: #fbfbfb;
+  }
+  &__radar {
+    background-color: #282d30;
+  }
+  &__goals {
+    background-color: #ff0000;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .dashboard {
+    padding: 45px 60px 59px 87px;
+  }
+  .activies-wrapper {
+    flex-direction: column-reverse;
+  }
+  .activities__key-data {
+    flex-direction: row;
+  }
+  .key-data {
+    width: 23%;
+    gap: 15px;
+    padding: 15px;
+    &__icon {
+      width: 25px;
+      height: 25px;
+      & img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &__label h2 {
+      font-size: 14s px;
+    }
+  }
+}

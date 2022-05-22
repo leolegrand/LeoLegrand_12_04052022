@@ -1,0 +1,40 @@
+@import '../app.scss';
+
+.navigation-vertical {
+  z-index: 9999;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: $navigation-margin;
+  width: 117px;
+  left: 0;
+  bottom: 0;
+  background: $secondary-color;
+  &__list {
+    margin-bottom: $navigation-margin;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      width: 64px;
+      height: 64px;
+      background-color: white;
+    }
+  }
+  &__copyright {
+    position: absolute;
+    bottom: 120px;
+    font-size: 12px;
+    font-weight: 500;
+    transform: rotate(-90deg);
+    color: white;
+    white-space: nowrap;
+  }
+}
