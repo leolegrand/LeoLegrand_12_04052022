@@ -11,6 +11,7 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 import SimpleBarChartTooltip from './SimpleBarChartTooltip/SimpleBarChartTooltip'
+import '../../styles/simplebarchart.css'
 
 const SimpleBarChart = ({ data }) => {
   // Formats the x-axis from a complete date by retrieving only the day;
@@ -78,6 +79,7 @@ const SimpleBarChart = ({ data }) => {
             height={100}
             iconType="circle"
             iconSize={8}
+            stroke={'black'}
           />
         </BarChart>
       </ResponsiveContainer>
