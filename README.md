@@ -1,4 +1,4 @@
-![SportSee's Dashboard](/assets/img/sportseedashboard.png "SportSee's Dashboard")
+![SportSee's Dashboard](src/assets/img/sportseedashboard.png "SportSee's Dashboard")
 
 # SportSee
 
